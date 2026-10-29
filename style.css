@@ -38,3 +38,119 @@ background-image: linear-gradient(45deg,#556B2F,#C2B280,#FFFDD0);
         padding: 25px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
+
+
+
+      /* Game list below */
+      .game-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+
+    align-items:start;
+}
+.game-item{
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #7b1fa2,
+        #1976d2,
+        #00c853
+    );
+
+    color:white;
+
+    padding:25px;
+    border-radius:18px;
+
+    font-weight:700;
+    font-size:1.05rem;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border:3px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+/* Shine Effect */
+.game-item::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition:.6s;
+}
+
+/* Hover */
+.game-item:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.04);
+
+    box-shadow:
+        0 0 15px #ffd54f,
+        0 0 35px rgba(255,213,79,.6);
+
+    border-color:#ffd54f;
+}
+
+.game-item:hover::before{
+    left:130%;
+}
+
+/* Active Click */
+.game-item:active{
+    transform:scale(.98);
+}
+.game-item img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    margin-top:15px;
+    border-radius:12px;
+    border:2px solid rgba(255,255,255,.3);
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+.game-info{
+    display:none;
+    margin-top:15px;
+    background:white;
+    color:#111;
+    padding:15px;
+    border-radius:12px;
+    text-align:left;
+    font-size:.9rem;
+    line-height:1.6;
+}
+
+.game-item.active .game-info{
+    display:block;
+}
