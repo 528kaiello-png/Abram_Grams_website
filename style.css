@@ -20,6 +20,30 @@ background-clip: text;
 color: transparent;
 -webkit-text-fill-color: transparent;
 }
+/* Card */
+
+.page-wrapper {
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+width: 100%;
+
+}
+
+.card {
+
+border-radius: 9%;
+
+background-image: linear-gradient(45deg,#556B2F,#C2B280,#FFFDD0);
+
+}
+
+/* Card */
+
 /* Gallery Container & Titles */
 .poster-gallery-container {
   max-width: 1200px;
