@@ -153,24 +153,31 @@ body {
 /* ==========================
    IMAGE CONTAINER & FITTING FIX
 ========================== */
+/* ==========================
+   IMAGE CONTAINER & FITTING FIX
+========================== */
 
 .poster-image-wrap {
   width: 100%;
+  aspect-ratio: 3 / 4; /* Standard vertical poster ratio */
   margin-top: 14px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #1a1a1a;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #141810; /* Dark olive tone behind images */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .poster-image-wrap img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3; /* Enforces uniform aspect ratio across all card images */
-  object-fit: cover;   /* Fills image box smoothly without stretching; crops outer edges if needed */
-  object-position: center;
+  object-fit: contain; /* Displays the FULL image without cropping any edges */
+  object-position: center; /* Keeps the poster perfectly centered */
   display: block;
+  padding: 6px; /* Gives posters a clean, framed look inside the card */
 }
 
 /* Smooth Expandable Info Drawer */
