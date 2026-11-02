@@ -1,0 +1,1 @@
+This website is a website that contains a nice hero I made it using both HTML and CSS I than made a Nav bar with a gradient text using olive colors I also made some cards using HTML and CSS and a bit of Java to help them open nicely I also used some Java CSS and HTML to make a miniature pop quiz and lastly the nav bar uses HTML and CSS
