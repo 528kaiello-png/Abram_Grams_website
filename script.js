@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentQuestion < quizData.length - 1) {
       nextBtn.textContent = 'Next Question →';
     } else {
-      nextBtn.textContent = 'See Results ⭐';
+      nextBtn.textContent = 'See Results!!!';
     }
     nextBtn.classList.remove('d-none');
   }
