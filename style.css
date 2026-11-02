@@ -257,7 +257,7 @@ body {
 
 .hero h1 {
   font-size: clamp(2rem, 5vw, 4rem);
-  color: #ffd54f;
+  color: black;
   line-height: 1.4;
   text-shadow: 0 0 10px olive, 0 0 20px olive, 0 0 40px rgba(255, 213, 79, .5);
 }
