@@ -267,3 +267,39 @@ body {
   font-size: 1.3rem;
   color: #f5f5f5;
 }
+/* Quiz Styling */
+.quiz-section .option-btn {
+  text-align: left;
+  padding: 0.85rem 1.25rem;
+  border: 2px solid #dee2e6;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  color: #212529;
+}
+
+.quiz-section .option-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #212529;
+  transform: translateY(-1px);
+}
+
+.quiz-section .option-btn.correct {
+  background-color: #d1e7dd !important;
+  border-color: #0f5132 !important;
+  color: #0f5132 !important;
+  font-weight: 700;
+}
+
+.quiz-section .option-btn.incorrect {
+  background-color: #f8d7da !important;
+  border-color: #842029 !important;
+  color: #842029 !important;
+}
+
+/* Footer Link Hover */
+footer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
