@@ -181,19 +181,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  function showResults() {
-    quizContainer.classList.add('d-none');
-    resultsContainer.classList.remove('d-none');
-    finalScoreEl.textContent = score;
+function showResults() {
+  quizContainer.classList.add('d-none');
+  resultsContainer.classList.remove('d-none');
+  
+  finalScoreEl.textContent = score;
 
-    if (score === 5) {
-      scoreFeedbackEl.textContent = "Outstanding! You are a true Abram Games design expert!";
-    } else if (score >= 3) {
-      scoreFeedbackEl.textContent = "Great job! You know your modern graphic design history well.";
-    } else {
-      scoreFeedbackEl.textContent = "Good try! Explore the gallery cards above to learn more about his works.";
-    }
+  if (score === 5) {
+    scoreFeedbackEl.textContent = 'Outstanding! You are a true Abram Games design expert!';
+  } else if (score >= 3) {
+    scoreFeedbackEl.textContent = 'Great job! You know your modern graphic design history well.';
+  } else {
+    scoreFeedbackEl.textContent = 'Good try! Explore the gallery cards above to learn more about his works.';
   }
+  
+  // Remove conflicting text color classes and add Bootstrap's dark text class
+  finalScoreEl.classList.remove('text-white', 'text-light', 'text-muted');
+  finalScoreEl.classList.add('text-dark');
+
+  scoreFeedbackEl.classList.remove('text-white', 'text-light', 'text-muted');
+  scoreFeedbackEl.classList.add('text-dark');
+}
+
 
   restartBtn.addEventListener('click', () => {
     currentQuestion = 0;
